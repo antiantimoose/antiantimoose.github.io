@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <div class="parentContainer">
+            <div id="topmost" class="containerTopmost">
+                <a class="leftContainer" href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a class="rightContainer" href="references.html">References</a>
+            </div>
+
+            <div id="main" class="containerTop">
+                <div id="left" class="containerSide">
+                    <p style="font-size: 30px; color:rgb(158, 173, 179); margin: 0"><u><b>Myotomes</b></u></p>
+                    <button id="C1C2: Cervical Flexion" style = "background-color: rgba(242, 105, 153)" onclick="MyotomeGif(this.id)">C1/C2</button>
+                    <button id="C3: Cervical Lateral Flexion" style = "background-color: rgba(242, 105, 128)" onclick="MyotomeGif(this.id)">C3</button>
+                    <button id="C4: Scapular Elevation" style = "background-color: rgba(242, 105, 109)" onclick="MyotomeGif(this.id)">C4</button>
+                    <button id="C5: Shoulder Abduction" style = "background-color: rgba(235, 72, 65)" onclick="MyotomeGif(this.id)">C5</button>
+                    <button id="C6: Elbow Flexion and Wrist Extension" style = "background-color: rgba(252, 107, 68)" onclick="MyotomeGif(this.id)">C6</button>
+                    <button id="C7: Elbow Extension and Wrist Flexion" style = "background-color: rgba(252, 133, 54)" onclick="MyotomeGif(this.id)">C7</button>
+                    <p style="font-size:20px; color:rgb(158, 173, 179); margin: 0"";><b>[[----<u>========</u>-----]]</b></p>
+                    <button id="C8: Thumb Extension" style = "background-color: rgba(216, 74, 60)" onclick="MyotomeGif(this.id)">C8</button>
+                    <button id="T1: Finger Abduction" style = "background-color: rgba(202, 30, 241)" onclick="MyotomeGif(this.id)">T1</button>
+                    <p style="font-size:20px; color:rgb(158, 173, 179); margin: 0"";><b>[[----<u>========</u>-----]]</b></p>
+                    <button id="L1L2: Hip Flexion" style = "background-color: rgba(253, 255, 120)" onclick="MyotomeGif(this.id)">L1L2</button>
+                    <button id="L3: Knee Extension" style = "background-color: rgba(255, 254, 64)" onclick="MyotomeGif(this.id)">L3</button>
+                    <p style="font-size:20px; color:rgb(158, 173, 179); margin: 0"";><b>[[----<u>========</u>-----]]</b></p>
+                    <button id="L4: Ankle Dorsiflexion" style = "background-color: rgba(253, 248, 115)" onclick="MyotomeGif(this.id)">L4</button>
+                    <button id="L5: First Toe Extension" style = "background-color: rgba(250, 202, 71)" onclick="MyotomeGif(this.id)">L5</button>
+                    <button id="S1: Ankle Plantarflexion" style = "background-color: rgba(58, 203, 58)" onclick="MyotomeGif(this.id)">S1</button>
+                    <p style="font-size:20px; color:rgb(158, 173, 179); margin: 0"";><b>[[----<u>========</u>-----]]</b></p>
+                    <button id="S2: Knee Flexion" style = "background-color: rgba(134, 236, 78)" onclick="MyotomeGif(this.id)">S2</button>
+                </div>
+
+
+                <div class="containerMain">
+                    <div class="parent">
+                        <img id="C1/C2_gif" class="image3" src="images/CervFlex.gif" width="400" height="400"/>
+                        <img id="C3_gif" class="image1" src="images/LatFlex.gif" width="400" height="400"/>
+                        <img id="C4_gif" class="image3" src="images/ShouldElev.gif" width="400" height="400"/>
+                        <img id="C5_gif" class="image3" src="images/ShouldAbduct.gif" width="400" height="400"/>
+                        <img id="C6_gif" class="image3" src="images/ElbowFlex.gif" width="400" height="400"/>
+                        <img id="C7_gif" class="image3" src="images/ElbowExtend.gif" width="400" height="400"/>
+                        <img id="C8_gif" class="image3" src="images/ThumbExtend.gif" width="400" height="400"/>
+                        <img id="T1_gif" class="image3" src="images/FingerAbduct.gif" width="400" height="400"/>
+                        <img id="L1/L2_gif" class="image3" src="images/HipFlex.gif" width="400" height="400"/>
+                        <img id="L3_gif" class="image3" src="images/KneeExtend.gif" width="400" height="400"/>
+                        <img id="L4_gif" class="image3" src="images/AnkleDorsi.gif" width="400" height="400"/>
+                        <img id="L5_gif" class="image3" src="images/FirstToeExtend.gif" width="400" height="400"/>
+                        <img id="S1_gif" class="image3" src="images/AnklePlantar.gif" width="400" height="400"/>
+                        <img id="S2_gif" class="image3" src="images/KneeFlex.gif" width="400" height="400"/>
+                        <img id="imagePlaceholder" class="image2" src="images/ImageDefault(1).png" width="400" height="400"/>
+
+                        <img id="C2img" class="image4" src="images/DermatomeLayers/C2.png" width="400" height="400" style="opacity: 0;"/>
+                        <img id="C3img" class="image4" src="images/DermatomeLayers/C3.png" width="400" height="400" style="opacity: 0;"/>
+                        <img id="C4img" class="image4" src="images/DermatomeLayers/C4.png" width="400" height="400" style="opacity: 0;"/>
+                        <img id="C5img" class="image4" src="images/DermatomeLayers/C5.png" width="400" height="400" style="opacity: 0;"/>
+                        <img id="C6img" class="image4" src="images/DermatomeLayers/C6.png" width="400" height="400" style="opacity: 0;"/>
+                        <img id="C7img" class="image4" src="images/DermatomeLayers/C7.png" width="400" height="400" style="opacity: 0;"/>
+                        <img id="C8img" class="image4" src="images/DermatomeLayers/C8.png" width="400" height="400" style="opacity: 0;"/>
+                        <img id="T1img" class="image4" src="images/DermatomeLayers/T1.png" width="400" height="400" style="opacity: 0;"/>
+                        <img id="T2img" class="image4" src="images/DermatomeLayers/T2.png" width="400" height="400" style="opacity: 0;"/>
+                        <img id="L1img" class="image4" src="images/DermatomeLayers/L1.png" width="400" height="400" style="opacity: 0;"/>
+                        <img id="L2img" class="image4" src="images/DermatomeLayers/L2.png" width="400" height="400" style="opacity: 0;"/>
+                        <img id="L3img" class="image4" src="images/DermatomeLayers/L3.png" width="400" height="400" style="opacity: 0;"/>
+                        <img id="L4img" class="image4" src="images/DermatomeLayers/L4.png" width="400" height="400" style="opacity: 0;"/>
+                        <img id="L5img" class="image4" src="images/DermatomeLayers/L5.png" width="400" height="400" style="opacity: 0;"/>
+                        <img id="S1img" class="image4" src="images/DermatomeLayers/S1.png" width="400" height="400" style="opacity: 0;"/>
+                        <img id="S2img" class="image4" src="images/DermatomeLayers/S2.png" width="400" height="400" style="opacity: 0;"/>
+                    </div>
+                    <div id="bottom" class="containerBottom">
+                        <p id="caption" style="color:rgb(158, 173, 179); font-size: 20pt;font-family:'Courier New', Courier, monospace; margin: 0"><b>Sample Text</b></p>
+                    </div>
+                </div>
+                    
+                <div id="right" class="containerSide" style="gap: 4px">
+                    <p style="font-size: 30px; color:rgb(158, 173, 179); margin: 0"><u><b>Dermatomes</b></u></p>
+                    <button id="C2" style = "background-color: rgba(245, 80, 53)" onclick="DermatomeOpacity(this.id)">C2</button>
+                    <button id="C3" style = "background-color: rgba(245, 80, 53)" onclick="DermatomeOpacity(this.id)">C3</button>
+                    <button id="C4" style = "background-color: rgba(250, 167, 154)" onclick="DermatomeOpacity(this.id)">C4</button>
+                    <button id="C5" style = "background-color: rgba(245, 80, 53)" onclick="DermatomeOpacity(this.id)">C5</button>
+                    <button id="C6" style = "background-color: rgba(250, 167, 154)" onclick="DermatomeOpacity(this.id)">C6</button>
+                    <button id="C7" style = "background-color: rgba(245, 80, 53)" onclick="DermatomeOpacity(this.id)">C7</button>
+                    <button id="C8" style = "background-color: rgba(250, 167, 154)" onclick="DermatomeOpacity(this.id)">C8</button>
+                    <p style="font-size:20px; color:rgb(158, 173, 179); margin: 0"";><b>[[----<u>========</u>-----]]</b></p>
+                    <button id="T1" style = "background-color: rgba(206, 221, 136)" onclick="DermatomeOpacity(this.id)">T1</button>
+                    <button id="T2" style = "background-color: rgba(172, 201, 25)" onclick="DermatomeOpacity(this.id)">T2</button>
+                    <p style="font-size:20px; color:rgb(158, 173, 179); margin: 0"";><b>[[----<u>========</u>-----]]</b></p>
+                    <button id="L1" style = "background-color: rgba(5, 162, 211)" onclick="DermatomeOpacity(this.id)">L1</button>
+                    <button id="L2" style = "background-color: rgba(130, 208, 233)" onclick="DermatomeOpacity(this.id)">L2</button>
+                    <button id="L3" style = "background-color: rgba(5, 162, 211)" onclick="DermatomeOpacity(this.id)">L3</button>
+                    <button id="L4" style = "background-color: rgba(130, 208, 233)" onclick="DermatomeOpacity(this.id)">L4</button>
+                    <button id="L5" style = "background-color: rgba(5, 162, 211)" onclick="DermatomeOpacity(this.id)">L5</button>
+                    <p style="font-size:20px; color:rgb(158, 173, 179); margin: 0"";><b>[[----<u>========</u>-----]]</b></p>
+                    <button id="S1" style = "background-color: rgba(245, 80, 53)" onclick="DermatomeOpacity(this.id)">S1</button>
+                    <button id="S2" style = "background-color: rgba(250, 167, 154)" onclick="DermatomeOpacity(this.id)">S2</button>
+                    <button id="S3" style = "background-color: rgba(245, 80, 53)" onclick="DermatomeOpacity(this.id)">S3</button>
+                    <button id="S45" style = "background-color: rgba(250, 167, 154)" onclick="DermatomeOpacity(this.id)">S4-5</button>
+                    
+                </div>
+            </div>
+
+
+            
+        </div>
+    </div>    
+
+    <script>
+
+        function MyotomeGif(id){
+            var el = document.getElementById("imagePlaceholder");
+            var caption = document.getElementById("caption");
+            
+            switch (id) {
+                case "C1C2: Cervical Flexion":
+                    var gifSelect = "C1/C2_gif";
+                    var gifSelectPath = "images/CervFlex.gif";
+                    break;
+                case "C3: Cervical Lateral Flexion":
+                    var gifSelect = "C3_gif";
+                    var gifSelectPath = "images/LatFlex.gif";
+                    break;
+                case "C4: Scapular Elevation":
+                    var gifSelect = "C4_gif";
+                    var gifSelectPath = "images/ShouldElev.gif";
+                    break;
+                case "C5: Shoulder Abduction":
+                    var gifSelect = "C5_gif";
+                    var gifSelectPath = "images/ShouldAbduct.gif";
+                    break;
+                case "C6: Elbow Flexion and Wrist Extension":
+                    var gifSelect = "C6_gif";
+                    var gifSelectPath = "images/ElbowFlex.gif";
+                    break;
+                case "C7: Elbow Extension and Wrist Flexion":
+                    var gifSelect = "C7_gif";
+                    var gifSelectPath = "images/ElbowExtend.gif";
+                    break;
+                case "C8: Thumb Extension":
+                    var gifSelect = "C8_gif";
+                    var gifSelectPath = "images/ThumbExtend.gif";
+                    break;
+                case "T1: Finger Abduction":
+                    var gifSelect = "T1_gif";
+                    var gifSelectPath = "images/FingerAbduct.gif";
+                    break;
+                case "L1L2: Hip Flexion":
+                    var gifSelect = "L1/L2_gif";
+                    var gifSelectPath = "images/HipFlex.gif";
+                    break;
+                case "L3: Knee Extension":
+                    var gifSelect = "L3_gif";
+                    var gifSelectPath = "images/KneeExtend.gif";
+                    break;
+                case "L4: Ankle Dorsiflexion":
+                    var gifSelect = "L4_gif";
+                    var gifSelectPath = "images/AnkleDorsi.gif";
+                    break;
+                case "L5: First Toe Extension":
+                    var gifSelect = "L5_gif";
+                    var gifSelectPath = "images/FirstToeExtend.gif";
+                    break;
+                case "S1: Ankle Plantarflexion":
+                    var gifSelect = "S1_gif";
+                    var gifSelectPath = "images/AnklePlantar.gif";
+                    break;
+                case "S2: Knee Flexion":
+                    var gifSelect = "S2_gif";
+                    var gifSelectPath = "images/KneeFlex.gif";
+                    break;
+            }
+
+            
+            // Disables all buttons for duration of gif
+            const buttons = document.querySelectorAll("button");
+            buttons.forEach(element => {
+                element.disabled = true;
+                // var colorArray = [];
+                // colorArray.push(element.style.backgroundColor);
+                // element.style.backgroundColor = "rgb(158, 173, 179)";
+            });
+
+            // Turns off all Dermatome overlays
+            var dermaImgs = document.getElementsByClassName("image4");
+            for (var i = 0; i < dermaImgs.length; i++) {
+                dermaImgs[i].style.opacity = "0";
+            }
+
+            // Makes the caption labelled
+            caption.innerHTML = id;
+            
+            // Hides the image, then restarts gif
+            el.hidden = true;
+            document.getElementById(gifSelect).style.zIndex = "10";
+            document.getElementById(gifSelect).src="";
+            document.getElementById(gifSelect).src=gifSelectPath;
+
+            // Waits 6700ms, then unhides image and resets text, and enables all
+            setTimeout(() => {
+                el.hidden = false;
+                document.getElementById(gifSelect).style.zIndex = "1";
+                el.style.zIndex = "10";
+                caption.innerHTML = null; //PUT STUFF TO DO ONCE TIMER RUNS OUT
+                buttons.forEach((element, index) => {
+                    // const color = colorArray[index % colorArray.length];
+                    // element.style.backgroundColor = color;
+                    element.disabled = false;
+                });
+            }, 6700)
+    
+        }
+    
+        function DermatomeOpacity(id){
+            var caption = document.getElementById("caption");
+            // const button = document.querySelector("button#myButton");
+            // const alpha = button.backgroundColor.alpha;
+            // console.log(alpha);
+
+            switch (id) {
+                case "C2":
+                    var captionText = "C2: Occipital Protuberance";
+                    break;
+                case "C3":
+                    var captionText = "C3: Supraclavicular Fossa";
+                    break;
+                case "C4":
+                    var captionText = "C4: Acromioclavicular Joint";
+                    break;
+                case "C5":
+                    var captionText = "C5: Lateral Antecubital Fossa";
+                    break;
+                case "C6":
+                    var captionText = "C6: Thumb";
+                    break;
+                case "C7":
+                    var captionText = "C7: Middle Finger";
+                    break;
+                case "C8":
+                    var captionText = "C8: Little Finger";
+                    break;
+                case "T1":
+                    var captionText = "T1: Medial Antecubital Fossa";
+                    break;
+                case "T2":
+                    var captionText = "T2: Apex of Axilla";
+                    break;
+                case "L1":
+                    var captionText = "L1: Upper Anterior Thigh";
+                    break;
+                case "L2":
+                    var captionText = "L2: Mid Anterior Thigh";
+                    break;
+                case "L3":
+                    var captionText = "L3: Medial Femoral Condyle";
+                    break;
+                case "L4":
+                    var captionText = "L4: Medial Malleolus";
+                    break;
+                case "L5":
+                    var captionText = "L5: Dorsum 3rd MTP Joint";
+                    break;
+                case "S1":
+                    var captionText = "S1: Lateral Heel";
+                    break;
+                case "S2":
+                    var captionText = "S2: Popliteal Fossa";
+                    break;
+                case "S3":
+                    var captionText = "S3: Ischial Tuberosity";
+                    break;
+                case "S45":
+                    var captionText = "S4-5: Perineal Area";
+                    break;
+            }
+
+            var imageName = id + "img";
+            image = document.getElementById(imageName);
+
+            if (image.style.opacity === "0") {
+                image.style.opacity = "1";
+                image.style.zIndex = "10";
+                caption.innerHTML = captionText;
+                // button.style.backgroundColor
+            }
+            else {
+                image.style.opacity = "0";
+            }
+
+        }
+    </script>
+
+
+    
+
+</body>
+</html>
+
+
