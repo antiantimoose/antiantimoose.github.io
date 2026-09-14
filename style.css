@@ -5,7 +5,7 @@ body{
     padding: 0;
     display: flex;
     /* background-color: darkslategrey; */
-    background-image: url("images/plank_texture.png");
+    background-image: url("Images/plank_texture.png");
     flex-wrap: wrap;
     justify-content: center; 
     align-items: center;
