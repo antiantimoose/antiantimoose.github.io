@@ -29,7 +29,7 @@
                     <button id="C8: Thumb Extension" style = "background-color: rgba(216, 74, 60)" onclick="MyotomeGif(this.id)">C8</button>
                     <button id="T1: Finger Abduction" style = "background-color: rgba(202, 30, 241)" onclick="MyotomeGif(this.id)">T1</button>
                     <p style="font-size:20px; color:rgb(158, 173, 179); margin: 0"";><b>[[----<u>========</u>-----]]</b></p>
-                    <button id="L1L2: Hip Flexion" style = "background-color: rgba(253, 255, 120)" onclick="MyotomeGif(this.id)">L1L2</button>
+                    <button id="L1/L2: Hip Flexion" style = "background-color: rgba(253, 255, 120)" onclick="MyotomeGif(this.id)">L1/L2</button>
                     <button id="L3: Knee Extension" style = "background-color: rgba(255, 254, 64)" onclick="MyotomeGif(this.id)">L3</button>
                     <p style="font-size:20px; color:rgb(158, 173, 179); margin: 0"";><b>[[----<u>========</u>-----]]</b></p>
                     <button id="L4: Ankle Dorsiflexion" style = "background-color: rgba(253, 248, 115)" onclick="MyotomeGif(this.id)">L4</button>
@@ -74,9 +74,11 @@
                         <img id="L5img" class="image4" src="Images/DermatomeLayers/L5.png" width="400" height="400" style="opacity: 0;"/>
                         <img id="S1img" class="image4" src="Images/DermatomeLayers/S1.png" width="400" height="400" style="opacity: 0;"/>
                         <img id="S2img" class="image4" src="Images/DermatomeLayers/S2.png" width="400" height="400" style="opacity: 0;"/>
+                        <img id="S3img" class="image4" src="Images/DermatomeLayers/S3.png" width="400" height="400" style="opacity: 0;"/>
+                        <img id="S45img" class="image4" src="Images/DermatomeLayers/S45.png" width="400" height="400" style="opacity: 0;"/>
                     </div>
                     <div id="bottom" class="containerBottom">
-                        <p id="caption" style="color:rgb(158, 173, 179); font-size: 20pt;font-family:'Courier New', Courier, monospace; margin: 0"><b>Sample Text</b></p>
+                        <p id="caption" style="color:rgb(158, 173, 179); font-size: 20pt;font-family:'Courier New', Courier, monospace; margin: 0"><b>It's like flashcards, but fancy :D</b></p>
                     </div>
                 </div>
                     
@@ -112,11 +114,14 @@
         </div>
     </div>    
 
+
     <script>
 
         function MyotomeGif(id){
             var el = document.getElementById("imagePlaceholder");
             var caption = document.getElementById("caption");
+
+            var colorArray = [];
             
             switch (id) {
                 case "C1C2: Cervical Flexion":
@@ -151,7 +156,7 @@
                     var gifSelect = "T1_gif";
                     var gifSelectPath = "Images/FingerAbduct.gif";
                     break;
-                case "L1L2: Hip Flexion":
+                case "L1/L2: Hip Flexion":
                     var gifSelect = "L1/L2_gif";
                     var gifSelectPath = "Images/HipFlex.gif";
                     break;
@@ -182,9 +187,17 @@
             const buttons = document.querySelectorAll("button");
             buttons.forEach(element => {
                 element.disabled = true;
-                // var colorArray = [];
                 // colorArray.push(element.style.backgroundColor);
+                // console.log(colorArray);
                 // element.style.backgroundColor = "rgb(158, 173, 179)";
+                // element.style.opacity = "0.3";
+                if (element.id === id) {
+                    element.style.opacity = "0.8";
+                }
+                else {
+                    element.style.opacity = "0.3";
+                    element.style.borderColor = "rgb(64, 66, 66)";
+                }
             });
 
             // Turns off all Dermatome overlays
@@ -211,6 +224,7 @@
                 buttons.forEach((element, index) => {
                     // const color = colorArray[index % colorArray.length];
                     // element.style.backgroundColor = color;
+                    element.style.opacity = "1.0";
                     element.disabled = false;
                 });
             }, 6700)
@@ -219,9 +233,7 @@
     
         function DermatomeOpacity(id){
             var caption = document.getElementById("caption");
-            // const button = document.querySelector("button#myButton");
-            // const alpha = button.backgroundColor.alpha;
-            // console.log(alpha);
+            const buttonClicked = document.getElementById(id);
 
             switch (id) {
                 case "C2":
@@ -284,20 +296,27 @@
             image = document.getElementById(imageName);
 
             if (image.style.opacity === "0") {
-                image.style.opacity = "1";
                 image.style.zIndex = "10";
                 caption.innerHTML = captionText;
-                // button.style.backgroundColor
+                buttonClicked.style.borderColor = "rgb(245, 209, 3)";
+                buttonClicked.style.borderWidth = "2px";
+                if (id === "S3" || id === "S45") {
+                    image.style.opacity = "1.0";
+                }
+                else {
+                    image.style.opacity = "0.4";
+                }
+
             }
             else {
                 image.style.opacity = "0";
+                buttonClicked.style.borderColor = "rgb(64, 66, 66)";
+                buttonClicked.style.borderWidth = "2px";
             }
-
         }
+
     </script>
 
-
-    
 
 </body>
 </html>
